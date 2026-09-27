@@ -1,0 +1,5 @@
+node_modules/
+uploads/
+recommender/book_recommender_model.pkl
+recommender/Books.csv/Books.csv
+.env

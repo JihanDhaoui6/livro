@@ -1,0 +1,78 @@
+ <!-- <!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action='/predict' method="POST">
+            ISBN <input type="text" name="isbn"><br>
+            book_title <input type="text" name="book_title"><br>
+            Year_Of_Publication <input type="text" name="iYear_Of_Publication"><br>
+            Image_URL_S <input type="text" name="Image_URL_S"><br>
+            Image_URL_M <input type="text" name="Image_URL_M"><br>
+            Image_URL_L <input type="text" name="Image_URL_L"><br>
+            book_details <input type="text" name="book_details"><br>
+
+            Class: {{result}}
+            <br>
+            <input type="submit" value="Predict">
+
+
+    </form>
+</body>
+</html> --> -->
+ <!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Recommendation System</title>
+</head>
+<body>
+    <h1>Book Recommendation System</h1>
+    <form action="/predict" method="POST">
+        Book Title: <input type="text" name="book_title"><br>
+        <input type="submit" value="Get Recommendations">
+    </form>
+    {% if result %}
+    <h2>Recommendations:</h2>
+    <p>{{ result }}</p>
+    {% endif %}
+</body>
+</html> --!> -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Recommendation System</title>
+</head>
+<body>
+    <h1>Book Recommendation System</h1>
+    <form action="/predict" method="POST">
+        Book Title: <input type="text" name="book_title"><br>
+        <input type="submit" value="Get Recommendations">
+    </form>
+    {% if recommendations %}
+    <h2>Recommendations:</h2>
+    <ul>
+        {% for recommendation in recommendations %}
+        <li>{{ recommendation }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</body>
+</html>
+
+
+
+ 
+ 
+ 
+ 
